@@ -109,10 +109,9 @@ NUM_CLASSES = 1
 # get file path
 file_path = os.path.dirname(os.path.realpath(__file__))
 PATH_TO_MODEL = os.path.join(file_path,'leaf_disease.h5')
-import subprocess
-if not os.path.isfile('leaf_disease.h5'):
-    subprocess.run(['curl --output leaf_disease.h5 "https://media.githubusercontent.com/media/ShyamaleeT/glaucocare/main/sep_5.h5"'], shell=True)
-model = tf.keras.models.load_model("leaf_disease.h5",compile=False)
+
+
+model = tf.keras.models.load_model(PATH_TO_MODEL,compile=False)
 
 out = [
     'bacterial_spot',
