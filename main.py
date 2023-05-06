@@ -169,7 +169,7 @@ def leaf_detection():
             return pickle.dumps(result)
         except Exception as e:
             logging.error(traceback.format_exc())
-            return jsonify({{'error':str(e)}})
+            return jsonify({'error':str(e)})
     return 'OK'
 
 
